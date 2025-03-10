@@ -11,7 +11,7 @@ require("dotenv").config();
 app.use(express.json());
 
 async function main() {
-    await mongoose.connect(process.env.DB_URL);
+    await mongoose.connect("mongodb+srv://odisvybz:uYkTC4Hg8YeVnb1I@kaweitechcluster.yujkj.mongodb.net/book-store?retryWrites=true&w=majority&appName=KaweitechCluster");
     
     app.use("/", (req, res) => {
         res.send("Book Store Server is running!");
